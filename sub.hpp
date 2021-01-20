@@ -8,7 +8,7 @@ class Sub : public Base {
 	Base* num1;
         Base* num2;
     public:
-        Add(Base* value1, Base* value2) : num1(value1), num2(value2){ }
+        Sub(Base* value1, Base* value2) : num1(value1), num2(value2){ }
         double evaluate() { return num1 -> evaluate() - num2 -> evaluate(); }
         virtual std::string stringify() { return "-"; }
 };

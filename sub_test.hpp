@@ -5,7 +5,7 @@
 
 #include "sub.hpp"
 
-TEST(AddTest, OpEvaluateNonZero) {
+TEST(SubTest, OpEvaluateNonZero) {
     Base* num1 = new Op(10);
     Base* num2 = new Op(3);
     Sub* test = new Sub(num1, num2);
