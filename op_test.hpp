@@ -10,4 +10,15 @@ TEST(OpTest, OpEvaluateNonZero) {
     EXPECT_EQ(test->evaluate(), 8);
 }
 
+TEST(OpTest2, OpEvaluateNoInput) {
+    Op* test = new Op();
+    EXPECT_EQ(test->evaluate(), 0);
+}
+
+TEST(OpTest3, OpEvaluateNeg) {
+    Op* test = new Op(-1);
+    EXPECT_EQ(test->evaluate(), -1);
+}
+
+
 #endif //__OP_TEST_HPP__

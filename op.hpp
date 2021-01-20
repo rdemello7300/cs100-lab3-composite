@@ -15,5 +15,4 @@ class Op : public Base {
         virtual std::string stringify() { return to_string(num); }
 };
 
-
 #endif //OP_HPP
