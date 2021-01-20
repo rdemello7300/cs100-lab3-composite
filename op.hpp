@@ -1,5 +1,5 @@
-#ifndef __OP_HPP__
-#define __OP_HPP__
+#ifndef OP_HPP
+#define OP_HPP
 
 #include "base.hpp"
 using namespace std;
@@ -7,13 +7,12 @@ using namespace std;
 
 class Op : public Base {
     private:
-	double num;
+        double num;
     public:
-	Op() : num(0) { }
+        Op() : num(0) { }
         Op(double value) : num(value) { }
         virtual double evaluate() { return num; }
         virtual std::string stringify() { return to_string(num); }
 };
 
-
-#endif //__OP_HPP__
+#endif //OP_HPP
