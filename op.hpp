@@ -2,26 +2,17 @@
 #define __OP_HPP__
 
 #include "base.hpp"
+using namespace std;
+#include <string>
 
 class Op : public Base {
+    private:
+	double num;
     public:
-        Op(double value) : Base() { }
-        virtual double evaluate() { return 0.0; }
-        virtual std::string stringify() { return ""; }
+        Op(double value) : num(value) { }
+        virtual double evaluate() { return num; }
+        virtual std::string stringify() { return to_string(num); }
 };
 
-class SevenOpMock : public Base{
-    public: 
-        SevenOpMock(){ }
-	virtual double evaluate() { return 7.5; }
-        virtual std::string stringify() { return "7.5"; }
-};
-
-class NegOpMock : public Base{
-    public:
-	NegOpMock() { }
-	virtual double evaluate() { return -7.5; }
-        virtual std::string stringify() { return "-7.5"; }
-};
 
 #endif //__OP_HPP__
