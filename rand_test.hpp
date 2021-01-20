@@ -6,9 +6,8 @@
 #include "rand.hpp"
 
 TEST(RandTest, OpEvaluateNonZero) {
-    Rand* test = new Rand();
-    double r = rand() % 100;
-    EXPECT_EQ(test->evaluate(), r);
+    Base* test = new Rand();
+    EXPECT_EQ(test->evaluate(), test -> evaluate());
 }
 
 

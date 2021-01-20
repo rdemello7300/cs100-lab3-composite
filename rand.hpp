@@ -3,13 +3,16 @@
 
 #include "base.hpp"
 using namespace std;
+#include<time.h>
 
 class Rand : public Base {
+    private:
+        double num;
     public:
-	int r = rand() % 100;
-        Rand() : Base() { }
-        virtual double evaluate() { return r; }
-        virtual std::string stringify() { return std::to_string(r); }
+        Rand() : num(rand() % 100) { }
+        double evaluate() { return num; }
+        std::string stringify() { return to_string(num); }
+
 };
 
 #endif //__OP_HPP__
