@@ -13,9 +13,9 @@ class Mult : public Base {
         std::string stringify() { return "("+ num1 -> stringify()+ " * "+ num2 -> stringify()+")"; }
 };
 
-class SevenOpMock: public Base {
+class MultOpMock: public Base {
     public:
-        SevenOpMock() { }
+        MultOpMock() { }
         virtual double evaluate() { return 7.5; }
         virtual string stringify() { return "7.5"; }
 };
