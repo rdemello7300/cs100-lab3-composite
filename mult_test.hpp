@@ -21,13 +21,20 @@ TEST(MultTest2, MultWithMult) {
     EXPECT_EQ(test2->evaluate(), 42);
 }
 
-TEST(MultTest2, MultWithMultByZero) {
+TEST(MultTest3, MultWithMultByZero) {
     Base* num1 = new Op(7);
     Base* num2 = new Op(3);
     Base* num3 = new Op();
     Base* test = new Mult(num1, num2);
     Base* test2 = new Mult(test, num3);
     EXPECT_EQ(test2->evaluate(), 0);
+}
+
+TEST(MultTest4, MultWithNegatives) {
+    Base* num1 = new Op(-7);
+    Base* num2 = new Op(3);
+    Base* test = new Mult(num1, num2);
+    EXPECT_EQ(test->evaluate(), -21);
 }
 
 
