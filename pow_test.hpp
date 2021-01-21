@@ -39,4 +39,11 @@ TEST(PowTest4, PowWithNegatives) {
     EXPECT_EQ(test->evaluate(), 1.0/8.0);
 }
 
+TEST(PowMockTest, testing){
+   PowOpMock* sev1 = new PowOpMock();
+   PowOpMock* sev2 = new PowOpMock();
+   Base* test = new Pow(sev1, sev2);
+   EXPECT_EQ(test-> evaluate(), pow(sev1, sev1);
+}
+
 #endif //__POW_TEST_HPP__
