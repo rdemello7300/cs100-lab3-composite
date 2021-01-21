@@ -41,8 +41,10 @@ TEST(MultTest4, MultWithNegatives) {
 }
 
 TEST(SevenMockTest, testing){
-   SevenOpMock* sev = new SevenOpMock();
-   EXPECT_EQ(sev-> evaluate(), 7.5);
+   SevenOpMock* sev1 = new SevenOpMock();
+   SevenOpMock* sev2 = new SevenOpMock();
+   Base* test = new Mult(sev1, sev2);
+   EXPECT_EQ(test-> evaluate(), 15.0);
 }
 
 
