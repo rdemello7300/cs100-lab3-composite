@@ -40,6 +40,11 @@ TEST(MultTest4, MultWithNegatives) {
     EXPECT_EQ(test->evaluate(), -21);
 }
 
+TEST(SevenMockTest, testing){
+   SevenOpMock* sev = new SevenOpMock();
+   EXPECT_EQ(sev-> evaluate(), 7.5);
+}
+
 
 #endif //__MULT_TEST_HPP__
 
