@@ -34,5 +34,12 @@ TEST(AddTest3, Adding3OpWithZero) {
 }
 
 
+TEST(AddTest4, AddWithNegatives) {
+    Base* num1 = new Op(5);
+    Base* num2 = new Op(-11);
+    Base* test = new Add(num1, num2);
+    EXPECT_EQ(test->evaluate(), -6);
+}
+
 
 #endif //__ADD_TEST_HPP__

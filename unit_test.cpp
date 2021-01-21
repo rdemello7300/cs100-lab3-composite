@@ -4,9 +4,7 @@
 #include "add_test.hpp"
 #include "rand_test.hpp"
 #include "mult_test.hpp"
-#include "op.hpp"
-#include "mult.hpp"
-#include "add.hpp"
+#include "sub_test.hpp"
 
 TEST(Testing, MultipleClass) {
     Base* num1 = new Op(7);
@@ -15,7 +13,6 @@ TEST(Testing, MultipleClass) {
     Base* test2 = new Add(test, num2);
     EXPECT_EQ(test2 ->evaluate(), 24);
 }
-
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

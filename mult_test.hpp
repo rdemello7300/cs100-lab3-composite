@@ -23,7 +23,7 @@ TEST(MultTest2, MultWithMult) {
     EXPECT_EQ(test2->stringify(), "((7.000000 * 3.000000) * 2.000000)");
 }
 
-TEST(MultTest2, MultWithMultByZero) {
+TEST(MultTest3, MultWithMultByZero) {
     Base* num1 = new Op(7);
     Base* num2 = new Op(3);
     Base* num3 = new Op();
@@ -31,6 +31,13 @@ TEST(MultTest2, MultWithMultByZero) {
     Base* test2 = new Mult(test, num3);
     EXPECT_EQ(test2->evaluate(), 0);
     EXPECT_EQ(test2->stringify(), "((7.000000 * 3.000000) * 0.000000)");
+}
+
+TEST(MultTest4, MultWithNegatives) {
+    Base* num1 = new Op(-7);
+    Base* num2 = new Op(3);
+    Base* test = new Mult(num1, num2);
+    EXPECT_EQ(test->evaluate(), -21);
 }
 
 
