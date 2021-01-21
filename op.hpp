@@ -4,6 +4,8 @@
 #include "base.hpp"
 using namespace std;
 #include <string>
+#include <iostream>
+#include <stdio.h>
 
 class Op : public Base {
     private:
@@ -11,8 +13,9 @@ class Op : public Base {
     public:
         Op() : num(0) { }
         Op(double value) : num(value) { }
-        virtual double evaluate() { return num; }
-        virtual std::string stringify() { return to_string(num); }
+        double evaluate() { return num; }
+        std::string stringify() {
+	 return to_string(num); }
 };
 
 #endif //OP_HPP
