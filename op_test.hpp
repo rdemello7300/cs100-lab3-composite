@@ -27,5 +27,10 @@ TEST(OpTest4, OpString) {
     EXPECT_EQ(test->stringify(), "2.000000");
 }
 
+TEST(OPMockTest, testing){
+   SevOpMock* test = new SevOpMock();
+   EXPECT_EQ(test-> evaluate(), 7.5);
+}
+
 
 #endif //__OP_TEST_HPP__

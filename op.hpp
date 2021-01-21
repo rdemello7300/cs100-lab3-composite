@@ -18,4 +18,12 @@ class Op : public Base {
 	 return to_string(num); }
 };
 
+class SevOpMock: public Base {
+    public:
+        SevOpMock() { }
+
+        virtual double evaluate() { return 7.5; }
+        virtual string stringify() { return "7.5"; }
+};
+
 #endif //OP_HPP

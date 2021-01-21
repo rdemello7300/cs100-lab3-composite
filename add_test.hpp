@@ -41,5 +41,12 @@ TEST(AddTest4, AddWithNegatives) {
     EXPECT_EQ(test->evaluate(), -6);
 }
 
+TEST(AddMockTest, testing){
+   AddOpMock* add1 = new AddOpMock();
+   AddOpMock* add2 = new AddOpMock();
+   Base* test = new Add(add1, add2);
+   EXPECT_EQ(test-> evaluate(), 15);
+}
+
 
 #endif //__ADD_TEST_HPP__

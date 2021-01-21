@@ -13,4 +13,12 @@ class Add : public Base {
         virtual std::string stringify() { return "("+ num1 -> stringify()+ " + "+ num2 -> stringify()+")"; }
 };
 
+class AddOpMock: public Base {
+    public:
+        AddOpMock() { }
+        virtual double evaluate() { return 7.5; }
+        virtual string stringify() { return "7.5"; }
+};
+
+
 #endif //__ADD_HPP__

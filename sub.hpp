@@ -13,4 +13,13 @@ class Sub : public Base {
         virtual std::string stringify() { return "(" + num1 -> stringify() +" - "+ num2 -> stringify() +")"; }
 };
 
+class SubOpMock: public Base {
+    public:
+        SubOpMock() { }
+        double evaluate() { return 7.5; }
+        string stringify() { return "7.5"; }
+};
+
+
+
 #endif //__SUB_HPP__
