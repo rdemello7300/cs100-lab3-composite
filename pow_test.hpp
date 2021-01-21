@@ -43,7 +43,7 @@ TEST(PowMockTest, testing){
    PowOpMock* sev1 = new PowOpMock();
    PowOpMock* sev2 = new PowOpMock();
    Base* test = new Pow(sev1, sev2);
-   EXPECT_EQ(test-> evaluate(), pow(sev1, sev1);
+   EXPECT_EQ(test-> evaluate(), pow(sev1, sev1));
 }
 
 #endif //__POW_TEST_HPP__
