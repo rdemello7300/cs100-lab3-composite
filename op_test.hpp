@@ -4,6 +4,8 @@
 #include "gtest/gtest.h"
 
 #include "op.hpp"
+#include <iostream>
+using namespace std;
 
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(8);
@@ -18,6 +20,11 @@ TEST(OpTest2, OpEvaluateNoInput) {
 TEST(OpTest3, OpEvaluateNeg) {
     Op* test = new Op(-1);
     EXPECT_EQ(test->evaluate(), -1);
+}
+
+TEST(OpTest4, OpString) {
+    Op* test = new Op(2);
+    EXPECT_EQ(test->stringify(), "2.000000");
 }
 
 
