@@ -14,4 +14,11 @@ class Pow : public Base {
         std::string stringify() { return "(" + num1 -> stringify() + " ** " + num2 -> stringify() + ")"; }
 };
 
+class PowOpMock: public Base {
+    public:
+        PowOpMock() { }
+        virtual double evaluate() { return 7.5; }
+        virtual string stringify() { return "7.5"; }
+};
+
 #endif //POW_HPP
