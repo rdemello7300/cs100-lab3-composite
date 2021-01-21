@@ -41,4 +41,12 @@ TEST(SubTest4, SubWithNegatives) {
     EXPECT_EQ(test->stringify(), "(-4.000000 - 6.000000)");
 }
 
+TEST(SubMockTest, testing){
+   SubOpMock* sev1 = new SubOpMock();
+   SubOpMock* sev2 = new SubOpMock();
+   Base* test = new Sub(sev1, sev2);
+   EXPECT_EQ(test-> evaluate(), 0);
+}
+
+
 #endif //__SUB_TEST_HPP__

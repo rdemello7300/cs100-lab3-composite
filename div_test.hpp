@@ -31,5 +31,12 @@ TEST(DivTest3, DivTestWithThreeOp) {
     EXPECT_EQ(test->stringify(), "((36.000000 / 2.000000) / 3.000000)");
 }
 
+TEST(DivMockTest, testing){
+   DivOpMock* sev1 = new DivOpMock();
+   DivOpMock* sev2 = new DivOpMock();
+   Base* test = new Div(sev1, sev2);
+   EXPECT_EQ(test-> evaluate(), 1);
+}
+
 
 #endif //__DIV_TEST_HPP__
